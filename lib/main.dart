@@ -1,18 +1,22 @@
 import 'package:flutter/material.dart';
+import 'sections/hero_section.dart';
+import 'sections/about_section.dart';
+import 'sections/services_section.dart';
+import 'sections/contact_section.dart';
 
 void main() {
-  runApp(const NidhiMakeupArtist());
+  runApp(const MyApp());
 }
 
-class NidhiMakeupArtist extends StatelessWidget {
-  const NidhiMakeupArtist({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Nidhi Makeup Artist',
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
@@ -27,45 +31,12 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: const [
             HeroSection(),
+            AboutSection(),
+            ServicesSection(),
+            ContactSection(),
           ],
         ),
       ),
     );
   }
 }
-
-class HeroSection extends StatelessWidget {
-  const HeroSection({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 650,
-      width: double.infinity,
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            Color(0xFF1F1C2C),
-            Color(0xFF928DAB),
-          ],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
-      ),
-      child: const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Nidhi Makeup Artist',
-              style: TextStyle(
-                fontSize: 56,
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 2,
-              ),
-            ),
-            SizedBox(height: 20),
-            Text(
-              'Bridal • Party • Editorial',
-              style: Te
