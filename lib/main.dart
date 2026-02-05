@@ -68,15 +68,4 @@ class HeroSection extends StatelessWidget {
             SizedBox(height: 20),
             Text(
               'Bridal • Party • Editorial',
-              style: TextStyle(
-                fontSize: 22,
-                color: Colors.white70,
-                letterSpacing: 1.5,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
+              style: Te
