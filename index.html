@@ -1,38 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Nidhi Makeup Artist | Lavish Beauty & Makeup Salon</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lavish by Nidhi | Makeup Artist</title>
+
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar">
-  <div class="logo">
-    <img src="images/logo.png" alt="Lavish Logo">
-    <span>Nidhi Makeup Artist</span>
-  </div>
 
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="salon.html">Salon Services</a></li>
-    <li><a href="makeup.html">Makeup Services</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="testimonials.html">Testimonials</a></li>
-    <li><a href="appointment.html">Book Appointment</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">Lavish<span>By Nidhi</span></div>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <nav id="navMenu">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
+<!-- HERO -->
 <section class="hero">
-  <h1>Nidhi Makeup Artist</h1>
-  <h2>Lavish Beauty & Makeup Salon</h2>
-  <p>Enhancing Natural Beauty with Elegance & Expertise</p>
-
-  <a href="appointment.html" class="btn">Book Appointment</a>
+  <img src="images/lavishlogo.jpg" class="hero-logo">
+  <h1>Nidhi Makeup Artist Studio</h1>
+  <p>Luxury Bridal • Glam • Salon Services</p>
 </section>
 
-<script src="js/script.js"></script>
-<link rel="stylesheet" href="css/style.css">
+<!-- ABOUT -->
+<section id="about" class="section">
+  <h2>About Me</h2>
+  <p>
+    Hi, I’m Nidhi Parab — professional makeup artist & founder of
+    <strong>Lavish Beauty & Makeup Studio</strong>, Alibag.
+    Since 2021, I’ve worked with 1000+ happy clients creating elegant,
+    flawless and confidence-boosting looks.
+  </p>
+</section>
 
+<!-- SERVICES -->
+<section id="services" class="section dark">
+  <h2>Our Services</h2>
+  <ul class="services">
+    <li>💄 Bridal & HD Makeup</li>
+    <li>✨ Party & Event Makeup</li>
+    <li>💇 Hair Styling & Treatments</li>
+    <li>💅 Nail Art & Spa</li>
+    <li>🌿 Facials & Skin Care</li>
+  </ul>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section">
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <img src="images/gallery1.jpg">
+    <img src="images/gallery2.jpg">
+    <img src="images/gallery3.jpg">
+    <img src="images/gallery4.jpg">
+    <img src="images/gallery5.jpg">
+    <img src="images/gallery6.jpg">
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section dark">
+  <h2>Contact</h2>
+  <p>📞 9271679860</p>
+  <p>📧 parabnidhi03@gmail.com</p>
+
+  <a class="whatsapp" href="https://wa.me/919271679860" target="_blank">
+    WhatsApp Us
+  </a>
+</section>
+
+<footer>
+  © 2026 Lavish by Nidhi. All Rights Reserved.
+</footer>
+
+<script src="js/script.js"></script>
 </body>
 </html>
