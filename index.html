@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nidhi Makeup Artist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { margin:0; font-family:Arial, sans-serif; background:#fff; color:#333; line-height:1.6; }
+    header { background:#f6b7c9; padding:80px 20px; text-align:center; }
+    section { max-width:900px; margin:auto; padding:60px 20px; text-align:center; }
+    h1 { font-size:40px; margin-bottom:10px; }
+    h2 { font-size:28px; color:#e91e63; margin-bottom:20px; }
+    .card { background:#fafafa; padding:20px; margin:15px 0; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.05); text-align:left; }
+    footer { background:#f2f2f2; padding:20px; text-align:center; font-size:14px; }
+    form input, form textarea { width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:5px; }
+    form button { background:#e91e63; color:#fff; border:none; padding:12px 20px; border-radius:5px; cursor:pointer; }
+    form button:hover { background:#d81b60; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Nidhi Makeup Artist</h1>
+  <p>Bridal • Party • Engagement • Natural Glam</p>
+</header>
+
+<section>
+  <h2>About</h2>
+  <p>
+    Hi, I am <strong>Nidhi Parab</strong>, a professional makeup artist based in Alibag, India.
+    I specialize in elegant, natural, and long-lasting bridal and party makeup.
+    I am the owner of <strong>Lavish Beauty & Makeup Salon</strong>, founded in 2021.
+    With 1000+ happy clients, we are known for hygiene, professionalism, and personalized beauty care.
+  </p>
+</section>
+
+<section>
+  <h2>Services</h2>
+  <div class="card">
+    <ul>
+      <li>Bridal, Engagement & Party Makeup</li>
+      <li>Hair Spa, Hair Colour & Styling</li>
+      <li>Facials, Hydrafacial & Skin Treatments</li>
+      <li>Waxing, Threading, Manicure & Pedicure</li>
+      <li>HD, Natural & Glam Makeup</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Testimonials</h2>
+  <div class="card"><strong>Yukta Shinde</strong><br>Absolutely loved my experience at Lavish Beauty! I left feeling like a million bucks.</div>
+  <div class="card"><strong>Priti Ambekar</strong><br>The attention to detail is unmatched. Highly recommend!</div>
+  <div class="card"><strong>Megha Parab</strong><br>I felt like a VIP from the moment I walked in.</div>
+  <div class="card"><strong>Manisha Shinde</strong><br>My makeup lasted all night. Highly recommend! 👌😊</div>
+  <div class="card"><strong>Rupali Kanaujiya</strong><br>Very good service.</div>
+  <div class="card"><strong>Madhuri Divakar</strong><br>Very nice ambiance.</div>
+  <div class="card"><strong>Ranjali Sharma</strong><br>Very nice service.</div>
+  <div class="card"><strong>Ayushi Mainkar</strong><br>Lavish Beauty truly lives up to its name.</div>
+  <div class="card"><strong>Sucheta Loke</strong><br>Unmatched quality and service. A must-visit!</div>
+</section>
+
+<section>
+  <h2>FAQ</h2>
+  <div class="card"><strong>Do you offer bridal makeup?</strong><br>Yes, we specialize in customized bridal makeup.</div>
+  <div class="card"><strong>What services do you provide?</strong><br>All salon services including hair, skin, and all types of makeup.</div>
+  <div class="card"><strong>Are your products cruelty-free?</strong><br>Yes, we use professional cruelty-free products.</div>
+  <div class="card"><strong>Can I book an appointment online?</strong><br>Yes, via WhatsApp, Instagram, or phone call.</div>
+  <div class="card"><strong>Do you offer group bookings?</strong><br>Yes, for weddings and events.</div>
+</section>
+
+<section>
+  <h2>Book an Appointment</h2>
+  <p><strong>ON YOUR FIRST APPOINTMENT</strong></p>
+  <form onsubmit="sendMessage(); return false;">
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <textarea id="message" placeholder="Message" required></textarea>
+    <button type="submit">Book Now</button>
+  </form>
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <p>
+    Instagram: @nidhi.makeup.artist<br>
+    Salon Instagram: @lavish_by_nidhi<br>
+    Phone: 9271679860<br>
+    Email: parabnidhi03@gmail.com
+  </p>
+</section>
+
+<footer>
+  © 2026 Nidhi Makeup Artist
+</footer>
+
+<script>
+  function sendMessage() {
+    const name = document.getElementById('name').value;
+    const message = document.getElementById('message').value;
+    const url = `https://wa.me/919271679860?text=Hello, I am ${name}. ${message}`;
+    window.open(url, '_blank');
+  }
+</script>
+
+</body>
+</html>
