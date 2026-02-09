@@ -1,2 +1,4 @@
-// Basic JavaScript
-console.log("Nidhi Makeup Artist website loaded");
+function toggleMenu() {
+  const menu = document.getElementById("navMenu");
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
