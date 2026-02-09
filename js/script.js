@@ -1,4 +1,13 @@
 function toggleMenu() {
-  const menu = document.getElementById("navMenu");
-  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+  const nav = document.getElementById("nav");
+  nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+}
+
+function openLightbox(src) {
+  document.getElementById("lightbox").style.display = "flex";
+  document.getElementById("lightboxImg").src = src;
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
 }
