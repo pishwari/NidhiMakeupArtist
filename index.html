@@ -5,104 +5,268 @@
   <meta charset="UTF-8">
   <title>Nidhi Makeup Artist</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
-    body { margin:0; font-family:Arial, sans-serif; background:#fff; color:#333; line-height:1.6; }
-    header { background:#f6b7c9; padding:80px 20px; text-align:center; }
-    section { max-width:900px; margin:auto; padding:60px 20px; text-align:center; }
-    h1 { font-size:40px; margin-bottom:10px; }
-    h2 { font-size:28px; color:#e91e63; margin-bottom:20px; }
-    .card { background:#fafafa; padding:20px; margin:15px 0; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.05); text-align:left; }
-    footer { background:#f2f2f2; padding:20px; text-align:center; font-size:14px; }
-    form input, form textarea { width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:5px; }
-    form button { background:#e91e63; color:#fff; border:none; padding:12px 20px; border-radius:5px; cursor:pointer; }
-    form button:hover { background:#d81b60; }
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', Arial, sans-serif;
+      background-color: #0b0b0b;
+      color: #ffffff;
+      scroll-behavior: smooth;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      padding: 16px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    nav .logo {
+      color: #d4af37;
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    nav a:hover {
+      color: #d4af37;
+    }
+
+    /* HERO SECTION */
+    header {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)), url('images/hero.jpg') center / cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    header h1 {
+      font-size: 48px;
+      color: #d4af37;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      font-size: 18px;
+      color: #f2f2f2;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* SECTIONS */
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 32px;
+      color: #d4af37;
+      margin-bottom: 30px;
+      letter-spacing: 1px;
+    }
+
+    section p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #dddddd;
+    }
+
+    /* SERVICES */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .service-box {
+      background: #141414;
+      padding: 30px;
+      border: 1px solid #2a2a2a;
+    }
+
+    .service-box h3 {
+      color: #ffffff;
+      margin: 0;
+      font-size: 18px;
+    }
+
+    /* GALLERY */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border: 2px solid #1f1f1f;
+    }
+
+    /* TESTIMONIALS */
+    .testimonial {
+      background: #141414;
+      padding: 30px;
+      margin-bottom: 20px;
+      border-left: 3px solid #d4af37;
+      text-align: left;
+    }
+
+    /* CONTACT FORM */
+    form {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 15px;
+      background: #0f0f0f;
+      border: 1px solid #333;
+      color: #ffffff;
+      font-size: 14px;
+    }
+
+    button {
+      background: #d4af37;
+      color: #000000;
+      border: none;
+      padding: 14px 30px;
+      font-size: 14px;
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.85;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #000000;
+      padding: 25px;
+      text-align: center;
+      font-size: 14px;
+      color: #aaaaaa;
+    }
   </style>
+
 </head>
 <body>
 
-<header>
-  <h1>Nidhi Makeup Artist</h1>
-  <p>Bridal • Party • Engagement • Natural Glam</p>
-</header>
+  <!-- NAVIGATION -->
 
-<section>
-  <h2>About</h2>
-  <p>
-    Hi, I am <strong>Nidhi Parab</strong>, a professional makeup artist based in Alibag, India.
-    I specialize in elegant, natural, and long-lasting bridal and party makeup.
-    I am the owner of <strong>Lavish Beauty & Makeup Salon</strong>, founded in 2021.
-    With 1000+ happy clients, we are known for hygiene, professionalism, and personalized beauty care.
-  </p>
-</section>
+  <nav>
+    <div class="logo">NIDHI</div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-<section>
-  <h2>Services</h2>
-  <div class="card">
-    <ul>
-      <li>Bridal, Engagement & Party Makeup</li>
-      <li>Hair Spa, Hair Colour & Styling</li>
-      <li>Facials, Hydrafacial & Skin Treatments</li>
-      <li>Waxing, Threading, Manicure & Pedicure</li>
-      <li>HD, Natural & Glam Makeup</li>
-    </ul>
-  </div>
-</section>
+  <!-- HERO -->
 
-<section>
-  <h2>Testimonials</h2>
-  <div class="card"><strong>Yukta Shinde</strong><br>Absolutely loved my experience at Lavish Beauty! I left feeling like a million bucks.</div>
-  <div class="card"><strong>Priti Ambekar</strong><br>The attention to detail is unmatched. Highly recommend!</div>
-  <div class="card"><strong>Megha Parab</strong><br>I felt like a VIP from the moment I walked in.</div>
-  <div class="card"><strong>Manisha Shinde</strong><br>My makeup lasted all night. Highly recommend! 👌😊</div>
-  <div class="card"><strong>Rupali Kanaujiya</strong><br>Very good service.</div>
-  <div class="card"><strong>Madhuri Divakar</strong><br>Very nice ambiance.</div>
-  <div class="card"><strong>Ranjali Sharma</strong><br>Very nice service.</div>
-  <div class="card"><strong>Ayushi Mainkar</strong><br>Lavish Beauty truly lives up to its name.</div>
-  <div class="card"><strong>Sucheta Loke</strong><br>Unmatched quality and service. A must-visit!</div>
-</section>
+  <header>
+    <div>
+      <h1>Nidhi Makeup Artist</h1>
+      <p>Luxury Bridal • Party • Engagement • Natural Glam Makeup</p>
+    </div>
+  </header>
 
-<section>
-  <h2>FAQ</h2>
-  <div class="card"><strong>Do you offer bridal makeup?</strong><br>Yes, we specialize in customized bridal makeup.</div>
-  <div class="card"><strong>What services do you provide?</strong><br>All salon services including hair, skin, and all types of makeup.</div>
-  <div class="card"><strong>Are your products cruelty-free?</strong><br>Yes, we use professional cruelty-free products.</div>
-  <div class="card"><strong>Can I book an appointment online?</strong><br>Yes, via WhatsApp, Instagram, or phone call.</div>
-  <div class="card"><strong>Do you offer group bookings?</strong><br>Yes, for weddings and events.</div>
-</section>
+  <!-- ABOUT -->
 
-<section>
-  <h2>Book an Appointment</h2>
-  <p><strong>ON YOUR FIRST APPOINTMENT</strong></p>
-  <form onsubmit="sendMessage(); return false;">
-    <input type="text" id="name" placeholder="Name" required>
-    <input type="email" id="email" placeholder="Email" required>
-    <textarea id="message" placeholder="Message" required></textarea>
-    <button type="submit">Book Now</button>
-  </form>
-</section>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Hi, I’m Nidhi Parab, a professional makeup artist based in Alibag. Founder of Lavish Beauty & Makeup Salon, trusted by 1000+ happy clients since 2021. I specialize in elegant, long-lasting bridal and party makeup for every special occasion.
+    </p>
+  </section>
 
-<section>
-  <h2>Contact</h2>
-  <p>
-    Instagram: @nidhi.makeup.artist<br>
-    Salon Instagram: @lavish_by_nidhi<br>
-    Phone: 9271679860<br>
-    Email: parabnidhi03@gmail.com
-  </p>
-</section>
+  <!-- SERVICES -->
 
-<footer>
-  © 2026 Nidhi Makeup Artist
-</footer>
+  <section id="services">
+    <h2>Services</h2>
+    <div class="services">
+      <div class="service-box"><h3>Bridal Makeup</h3></div>
+      <div class="service-box"><h3>Party Makeup</h3></div>
+      <div class="service-box"><h3>Engagement Makeup</h3></div>
+      <div class="service-box"><h3>HD & Natural Glam</h3></div>
+    </div>
+  </section>
 
-<script>
-  function sendMessage() {
-    const name = document.getElementById('name').value;
-    const message = document.getElementById('message').value;
-    const url = `https://wa.me/919271679860?text=Hello, I am ${name}. ${message}`;
-    window.open(url, '_blank');
-  }
-</script>
+  <!-- GALLERY -->
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="images/look1.jpg" alt="Makeup Look">
+      <img src="images/look2.jpg" alt="Makeup Look">
+      <img src="images/look3.jpg" alt="Makeup Look">
+      <img src="images/look4.jpg" alt="Makeup Look">
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+
+  <section id="reviews">
+    <h2>Testimonials</h2>
+    <div class="testimonial">Yukta Shinde — Absolutely loved my experience at Lavish Beauty!</div>
+    <div class="testimonial">Priti Ambekar — Attention to detail is unmatched. Highly recommend!</div>
+    <div class="testimonial">Manisha Shinde — Makeup lasted all night. Perfect for special events.</div>
+  </section>
+
+  <!-- CONTACT -->
+
+  <section id="contact">
+    <h2>Book an Appointment</h2>
+    <form>
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea rows="4" placeholder="Message"></textarea>
+      <button type="submit">BOOK NOW</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 Nidhi Makeup Artist • Lavish Beauty & Makeup Salon
+  </footer>
 
 </body>
 </html>
