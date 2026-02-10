@@ -1,114 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nidhi Makeup Artist | Lavish Beauty</title>
 
-  <title>Nidhi Makeup Artist | Lavish Beauty & Makeup Salon</title>
-
-  <!-- Luxury Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
 <header class="header">
-  <div class="logo">Nidhi Makeup Artist</div>
+  <div class="logo">Lavish by Nidhi</div>
 
-  <nav class="nav">
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <nav class="nav" id="nav">
     <a href="#about">About</a>
-    <a href="#services">Services</a>
     <a href="#portfolio">Portfolio</a>
+    <a href="#services">Services</a>
+    <a href="#testimonials">Testimonials</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <h1>Lavish Beauty & Makeup Salon</h1>
-    <p> · Bridal Makeup · Soft Glam · Salon Services</p>
-    <a href="#contact" class="btn">Book Appointment</a>
-  </div>
-</section>
+    <h1>Nidhi Makeup Artist</h1>
+    <p>Luxury Bridal · Editorial Glam · Signature Looks</p>
 
-<!-- ================= ABOUT ================= -->
-<section id="about" class="section">
-  <h2>About Me</h2>
-
-  <div class="text">
-    Hi, I’m <strong>Nidhi Parab</strong>, a professional makeup artist and the founder of
-    <strong>Nidhi Makeup Studio & Lavish Beauty & Makeup Salon</strong>, based in Alibag, India.
-    <br><br>
-    My journey in the beauty industry began with a deep passion for enhancing natural beauty and
-    helping people feel confident in their own skin. Since 2021, I have had the privilege of
-    working with <strong>1000+ happy clients</strong>, offering personalized beauty, hair, and
-    makeup services for weddings, events, and everyday elegance.
-    <br><br>
-    I specialize in bridal makeup, HD makeup, party looks, and natural glam, focusing on flawless
-    finishes, long-lasting results, and styles that suit each client’s personality, skin type,
-    and occasion.
-    <br><br>
-    At Lavish Beauty & Makeup Salon, hygiene, premium products, and client comfort are top
-    priorities. My goal is simple — to make you feel beautiful, confident, and truly special.
-  </div>
-</section>
-
-<!-- ================= PORTFOLIO ================= -->
-<section id="portfolio" class="section dark">
-  <h2>Makeup Portfolio</h2>
-
-  <p class="muted">
-    · Bridal · Reception · Party · Editorial Looks
-    <br><br>
-    A curated portfolio of luxury makeup work.
-    <br>
-    (Editorial gallery will be added here)
-  </p>
-</section>
-
-<!-- ================= SERVICES ================= -->
-<section id="services" class="section">
-  <h2>Services</h2>
-
-  <div class="service-list">
-    <div>Bridal & Pre-Bridal Makeup</div>
-    <div>HD Makeup</div>
-    <div>Party & Event Makeup</div>
-    <div>Hair Styling & Treatments</div>
-    <div>Facials, Skin & Nail Care</div>
-    <div>Complete Bridal Packages</div>
-  </div>
-</section>
-
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="section dark">
-  <h2>Contact</h2>
-
-  <div class="contact-info">
-    <p>📞 <strong>+91 92716 79860</strong></p>
-    <p>📧 parabnidhi03@gmail.com</p>
-    <p>📍 Alibag, Maharashtra, India</p>
-  </div>
-
-  <div class="contact-actions">
-    <a href="https://wa.me/919271679860" target="_blank" class="btn outline">
-      WhatsApp Us
+    <a class="btn"
+       href="https://wa.me/919271679860?text=Hi%20may%20I%20get%20in%20touch%20with%20you"
+       target="_blank">
+       Book Appointment
     </a>
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
+<!-- ABOUT -->
+<section id="about" class="section">
+<h2>About</h2>
+
+<p class="editorial">
+I’m <strong>Nidhi Parab</strong>, professional makeup artist and founder of
+<strong>Lavish Beauty & Makeup Salon</strong>, Alibag.
+<br><br>
+Since 2021, I’ve had the honour of working with over <strong>1000+ clients</strong>,
+creating refined bridal, reception and occasion looks that feel timeless,
+comfortable and camera-perfect.
+<br><br>
+My approach is subtle luxury — enhancing natural features, balancing skin,
+eyes and structure, and tailoring every look to the individual.
+<br><br>
+Whether it’s your wedding, a milestone celebration, or a personal self-care
+experience, my goal is to make you feel confident, elegant and unforgettable.
+</p>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="section dark">
+<h2>Editorial Portfolio</h2>
+
+<div class="grid">
+  <div class="grid-item" onclick="openLightbox('Bridal Makeup')">Bridal Makeup</div>
+  <div class="grid-item" onclick="openLightbox('Reception Glam')">Reception Glam</div>
+  <div class="grid-item" onclick="openLightbox('Party Looks')">Party Looks</div>
+  <div class="grid-item" onclick="openLightbox('HD Makeup')">HD Makeup</div>
+  <div class="grid-item" onclick="openLightbox('Soft Glam')">Soft Glam</div>
+  <div class="grid-item" onclick="openLightbox('Editorial')">Editorial</div>
+</div>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <div class="lightbox-content" id="lightboxContent"></div>
+</div>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+<h2>Services</h2>
+
+<ul class="services">
+  <li>Bridal & Pre-Bridal Makeup</li>
+  <li>HD & Airbrush Makeup</li>
+  <li>Reception & Party Glam</li>
+  <li>Hair Styling & Treatments</li>
+  <li>Skin, Nail & Salon Services</li>
+  <li>Complete Bridal Packages</li>
+</ul>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="section dark">
+<h2>Client Words</h2>
+
+<div class="slider">
+  <div class="slide active">“Absolutely flawless bridal look. Elegant and long-lasting.”</div>
+  <div class="slide">“Nidhi understands face structure perfectly. Highly recommended.”</div>
+  <div class="slide">“Luxury experience from start to finish.”</div>
+</div>
+</section>
+
+<!-- BOOKING FORM -->
+<section class="section">
+<h2>Book a Consultation</h2>
+
+<form action="https://formsubmit.co/parabnidhi03@gmail.com" method="POST" class="form">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="New Appointment Request">
+
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Event details / date"></textarea>
+
+  <button class="btn">Send Request</button>
+</form>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section dark">
+<h2>Contact</h2>
+
+<p>📞 +91 92716 79860</p>
+<p>📧 parabnidhi03@gmail.com</p>
+<p>📍 Alibag, Maharashtra</p>
+
+<iframe
+src="https://www.google.com/maps?q=Lavish%20Beauty%20%26%20Makeup%20Salon%20Alibag&output=embed"
+loading="lazy"></iframe>
+</section>
+
 <footer class="footer">
-  © 2026 Lavish by Nidhi. All Rights Reserved.
+© 2026 Lavish by Nidhi
 </footer>
 
-<!-- JS -->
 <script src="js/script.js"></script>
-
 </body>
 </html>
