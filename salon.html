@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Salon Services | Lavish Beauty & Makeup Salon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0b0b0b;
+  --gold:#c8a951;
+  --text:#eaeaea;
+  --muted:#9c9c9c;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Inter',sans-serif;
+  line-height:1.8;
+}
+a{text-decoration:none;color:inherit}
+
+/* HEADER */
+header{
+  padding:30px 20px;
+  border-bottom:1px solid rgba(200,169,81,.25);
+}
+.header-inner{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+}
+.brand{
+  font-family:'Playfair Display',serif;
+  font-size:22px;
+}
+nav a{
+  margin-left:28px;
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+nav a:hover{color:var(--gold)}
+
+section{
+  max-width:1000px;
+  margin:auto;
+  padding:100px 20px;
+}
+
+h1,h2{
+  font-family:'Playfair Display',serif;
+}
+h1{font-size:44px;margin-bottom:20px}
+h2{font-size:30px;margin-bottom:20px}
+
+ul{margin-left:20px}
+li{margin-bottom:10px;color:var(--muted)}
+
+.divider{
+  height:1px;
+  background:rgba(200,169,81,.25);
+  margin:80px 0;
+}
+
+.cta{text-align:center;padding:80px 20px}
+.btn{
+  border:1px solid var(--gold);
+  padding:14px 36px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:12px;
+  color:var(--gold);
+}
+.btn:hover{background:var(--gold);color:#000}
+
+footer{
+  border-top:1px solid rgba(200,169,81,.2);
+  padding:50px;
+  text-align:center;
+  color:var(--muted);
+  font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="brand">Lavish Beauty Salon</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="makeup.html">Makeup</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section>
+  <h1>Salon Services</h1>
+  <p class="muted">
+    A complete beauty destination offering professional care,
+    premium products, and a calm luxury environment.
+  </p>
+
+  <div class="divider"></div>
+
+  <h2>Hair Services</h2>
+  <ul>
+    <li>Haircuts, trims & styling</li>
+    <li>Blowouts, ironing & roller setting</li>
+    <li>Global coloring, highlights & root touch-ups</li>
+    <li>Keratin, rebonding & smoothening</li>
+    <li>Hair spa & scalp treatments</li>
+  </ul>
+
+  <div class="divider"></div>
+
+  <h2>Skin & Face Care</h2>
+  <ul>
+    <li>Fruit, gold, pearl & whitening facials</li>
+    <li>Hydra facial & anti-aging treatments</li>
+    <li>Clean-ups, detanning & polishing</li>
+    <li>Body rejuvenation therapies</li>
+  </ul>
+
+  <div class="divider"></div>
+
+  <h2>Nail & Grooming</h2>
+  <ul>
+    <li>Manicure & pedicure</li>
+    <li>Paraffin spa treatments</li>
+    <li>Nail art, gel & acrylic extensions</li>
+  </ul>
+
+  <div class="divider"></div>
+
+  <h2>Hair Removal</h2>
+  <ul>
+    <li>Full body waxing</li>
+    <li>Face & underarms</li>
+    <li>Eyebrow & facial threading</li>
+  </ul>
+</section>
+
+<div class="cta" id="contact">
+  <a class="btn" href="https://wa.me/919271679860?text=Hi%20may%20I%20get%20in%20touch%20with%20you" target="_blank">
+    Book Salon Appointment
+  </a>
+</div>
+
+<footer>
+  © Lavish Beauty & Makeup Salon | Alibag
+</footer>
+
+</body>
+</html>
