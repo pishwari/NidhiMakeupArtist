@@ -1,36 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nidhi Makeup Artist | Lavish Beauty</title>
+  <meta charset="UTF-8" />
+  <title>Lavish by Nidhi | Nidhi Makeup Artist Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+  <!-- Google Font (Editorial Luxury) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0b0b0b;
+      --gold:#c8a951;
+      --text:#eaeaea;
+      --muted:#a8a8a8;
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      background:var(--bg);
+      color:var(--text);
+      font-family:'Inter', sans-serif;
+      line-height:1.7;
+    }
+
+    a{color:inherit;text-decoration:none}
+
+    /* HEADER */
+    header{
+      position:fixed;
+      top:0;
+      width:100%;
+      z-index:100;
+      background:rgba(0,0,0,0.9);
+      border-bottom:1px solid rgba(200,169,81,0.2);
+    }
+
+    .nav{
+      max-width:1200px;
+      margin:auto;
+      padding:18px 20px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .brand{
+      font-family:'Playfair Display', serif;
+      font-size:22px;
+      letter-spacing:1px;
+    }
+
+    nav ul{
+      display:flex;
+      gap:28px;
+      list-style:none;
+      font-size:14px;
+      text-transform:uppercase;
+      letter-spacing:1px;
+    }
+
+    nav a:hover{color:var(--gold)}
+
+    /* HERO */
+    .hero{
+      height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:0 20px;
+    }
+
+    .hero h1{
+      font-family:'Playfair Display', serif;
+      font-size:48px;
+      margin-bottom:12px;
+    }
+
+    .hero h2{
+      font-size:14px;
+      letter-spacing:4px;
+      text-transform:uppercase;
+      color:var(--muted);
+      margin-bottom:40px;
+    }
+
+    .btn{
+      display:inline-block;
+      border:1px solid var(--gold);
+      color:var(--gold);
+      padding:14px 36px;
+      text-transform:uppercase;
+      letter-spacing:2px;
+      font-size:12px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:var(--gold);
+      color:#000;
+    }
+
+    /* SECTIONS */
+    section{
+      max-width:1100px;
+      margin:auto;
+      padding:120px 20px;
+    }
+
+    .section-title{
+      font-family:'Playfair Display', serif;
+      font-size:34px;
+      margin-bottom:30px;
+    }
+
+    .muted{color:var(--muted)}
+
+    /* SPLIT LINKS */
+    .split{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:60px;
+      margin-top:60px;
+    }
+
+    .split-box{
+      border:1px solid rgba(200,169,81,0.25);
+      padding:50px;
+      text-align:center;
+      transition:0.3s;
+    }
+
+    .split-box:hover{
+      border-color:var(--gold);
+    }
+
+    .split-box h3{
+      font-family:'Playfair Display', serif;
+      font-size:26px;
+      margin-bottom:14px;
+    }
+
+    /* TESTIMONIALS */
+    .testimonial{
+      border-left:3px solid var(--gold);
+      padding-left:20px;
+      margin-bottom:40px;
+      font-style:italic;
+      color:var(--muted);
+    }
+
+    /* FOOTER */
+    footer{
+      border-top:1px solid rgba(200,169,81,0.2);
+      padding:60px 20px;
+      text-align:center;
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    /* MOBILE */
+    @media(max-width:768px){
+      nav ul{display:none}
+      .hero h1{font-size:34px}
+      .split{grid-template-columns:1fr}
+    }
+  </style>
 </head>
 
 <body>
 
-<header class="header">
-  <div class="logo">Lavish by Nidhi</div>
-
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-  <nav class="nav" id="nav">
-    <a href="#about">About</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#services">Services</a>
-    <a href="#testimonials">Testimonials</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<header>
+  <div class="nav">
+    <div class="brand">Lavish by Nidhi</div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="makeup.html">Makeup</a></li>
+        <li><a href="salon.html">Salon</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-content">
-    <h1>Nidhi Makeup Artist</h1>
-    <p>Luxury Bridal · Editorial Glam · Signature Looks</p>
-
+  <div>
+    <h1>Nidhi Makeup Artist Studio</h1>
+    <h2>Lavish Beauty & Makeup Salon</h2>
     <a class="btn"
        href="https://wa.me/919271679860?text=Hi%20may%20I%20get%20in%20touch%20with%20you"
        target="_blank">
@@ -40,102 +199,65 @@
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="section">
-<h2>About</h2>
-
-<p class="editorial">
-I’m <strong>Nidhi Parab</strong>, professional makeup artist and founder of
-<strong>Lavish Beauty & Makeup Salon</strong>, Alibag.
-<br><br>
-Since 2021, I’ve had the honour of working with over <strong>1000+ clients</strong>,
-creating refined bridal, reception and occasion looks that feel timeless,
-comfortable and camera-perfect.
-<br><br>
-My approach is subtle luxury — enhancing natural features, balancing skin,
-eyes and structure, and tailoring every look to the individual.
-<br><br>
-Whether it’s your wedding, a milestone celebration, or a personal self-care
-experience, my goal is to make you feel confident, elegant and unforgettable.
-</p>
+<section id="about">
+  <h2 class="section-title">About Me</h2>
+  <p class="muted">
+    Hi, I’m <strong>Nidhi Parab</strong>, a professional makeup artist and the founder of
+    <strong>Nidhi Makeup Artist & Lavish Beauty & Makeup Salon</strong>, based in Alibag, India.
+    Since 2021, I’ve worked with 1000+ happy clients, creating elegant, comfortable, and
+    long-lasting beauty experiences for weddings, events, and everyday confidence.
+  </p>
 </section>
 
-<!-- PORTFOLIO -->
-<section id="portfolio" class="section dark">
-<h2>Editorial Portfolio</h2>
+<!-- SPLIT -->
+<section>
+  <div class="split">
+    <div class="split-box">
+      <h3>Makeup Artist</h3>
+      <p class="muted">
+        Bridal, HD, party & editorial makeup with personalized styling and flawless finishes.
+      </p>
+      <br/>
+      <a class="btn" href="makeup.html">Explore Makeup</a>
+    </div>
 
-<div class="grid">
-  <div class="grid-item" onclick="openLightbox('Bridal Makeup')">Bridal Makeup</div>
-  <div class="grid-item" onclick="openLightbox('Reception Glam')">Reception Glam</div>
-  <div class="grid-item" onclick="openLightbox('Party Looks')">Party Looks</div>
-  <div class="grid-item" onclick="openLightbox('HD Makeup')">HD Makeup</div>
-  <div class="grid-item" onclick="openLightbox('Soft Glam')">Soft Glam</div>
-  <div class="grid-item" onclick="openLightbox('Editorial')">Editorial</div>
-</div>
-</section>
-
-<!-- LIGHTBOX -->
-<div id="lightbox" class="lightbox" onclick="closeLightbox()">
-  <div class="lightbox-content" id="lightboxContent"></div>
-</div>
-
-<!-- SERVICES -->
-<section id="services" class="section">
-<h2>Services</h2>
-
-<ul class="services">
-  <li>Bridal & Pre-Bridal Makeup</li>
-  <li>HD & Airbrush Makeup</li>
-  <li>Reception & Party Glam</li>
-  <li>Hair Styling & Treatments</li>
-  <li>Skin, Nail & Salon Services</li>
-  <li>Complete Bridal Packages</li>
-</ul>
+    <div class="split-box">
+      <h3>Beauty Salon</h3>
+      <p class="muted">
+        Hair, skin, nails & complete bridal grooming in a calm luxury environment.
+      </p>
+      <br/>
+      <a class="btn" href="salon.html">Explore Salon</a>
+    </div>
+  </div>
 </section>
 
 <!-- TESTIMONIALS -->
-<section id="testimonials" class="section dark">
-<h2>Client Words</h2>
+<section>
+  <h2 class="section-title">Client Words</h2>
 
-<div class="slider">
-  <div class="slide active">“Absolutely flawless bridal look. Elegant and long-lasting.”</div>
-  <div class="slide">“Nidhi understands face structure perfectly. Highly recommended.”</div>
-  <div class="slide">“Luxury experience from start to finish.”</div>
-</div>
-</section>
+  <div class="testimonial">
+    “Elegant, flawless, and extremely professional. Nidhi made my wedding day perfect.”
+  </div>
 
-<!-- BOOKING FORM -->
-<section class="section">
-<h2>Book a Consultation</h2>
-
-<form action="https://formsubmit.co/parabnidhi03@gmail.com" method="POST" class="form">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_subject" value="New Appointment Request">
-
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="email" name="email" placeholder="Your Email" required>
-  <textarea name="message" placeholder="Event details / date"></textarea>
-
-  <button class="btn">Send Request</button>
-</form>
+  <div class="testimonial">
+    “Luxury experience with comfort. The makeup felt light yet stunning.”
+  </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section dark">
-<h2>Contact</h2>
-
-<p>📞 +91 92716 79860</p>
-<p>📧 parabnidhi03@gmail.com</p>
-<p>📍 Alibag, Maharashtra</p>
-
-<iframe
-src="https://www.google.com/maps?q=Lavish%20Beauty%20%26%20Makeup%20Salon%20Alibag&output=embed"
-loading="lazy"></iframe>
+<section id="contact">
+  <h2 class="section-title">Contact</h2>
+  <p class="muted">
+    📍 Alibag, Maharashtra<br/>
+    📞 +91 92716 79860<br/>
+    📧 parabnidhi03@gmail.com
+  </p>
 </section>
 
-<footer class="footer">
-© 2026 Lavish by Nidhi
+<footer>
+  © Lavish Beauty & Makeup Salon — Nidhi Makeup Artist
 </footer>
 
-<script src="js/script.js"></script>
 </body>
 </html>
