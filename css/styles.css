@@ -1,3 +1,6 @@
+/* =========================
+   ROOT VARIABLES
+========================= */
 :root {
   --gold: #c9a24d;
   --gold-light: #d4af37;
@@ -6,12 +9,18 @@
   --text: #eeeeee;
 }
 
+/* =========================
+   RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* =========================
+   BASE STYLES
+========================= */
 body {
   font-family: 'Poppins', sans-serif;
   background: var(--black);
@@ -33,7 +42,9 @@ h1, h2 {
   background: var(--dark);
 }
 
-/* Buttons */
+/* =========================
+   BUTTONS
+========================= */
 .btn {
   display: inline-block;
   background: linear-gradient(135deg, #d4af37, #b8962e);
@@ -50,7 +61,9 @@ h1, h2 {
   opacity: 0.85;
 }
 
-/* Editorial Text */
+/* =========================
+   EDITORIAL TEXT
+========================= */
 .editorial {
   max-width: 800px;
   line-height: 1.8;
@@ -58,7 +71,9 @@ h1, h2 {
   text-align: center;
 }
 
-/* Basic Grid (if used elsewhere) */
+/* =========================
+   BASIC GRID
+========================= */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -77,7 +92,9 @@ h1, h2 {
   background: rgba(201, 162, 77, 0.08);
 }
 
-/* Lightbox */
+/* =========================
+   LIGHTBOX
+========================= */
 .lightbox {
   display: none;
   position: fixed;
@@ -93,7 +110,9 @@ h1, h2 {
   font-size: 26px;
 }
 
-/* Slider */
+/* =========================
+   SIMPLE SLIDER (IF USED)
+========================= */
 .slider .slide {
   display: none;
 }
@@ -102,17 +121,18 @@ h1, h2 {
   display: block;
 }
 
-/* Map iframe */
+/* =========================
+   MAP
+========================= */
 iframe {
   width: 100%;
   height: 300px;
   border: 0;
 }
 
-/* ============================= */
-/* INSTAGRAM 3 × 5 GALLERY STYLE */
-/* ============================= */
-
+/* =========================
+   INSTAGRAM 3×5 GALLERY
+========================= */
 .insta-section {
   padding: 80px 8%;
   background: var(--dark);
@@ -126,13 +146,6 @@ iframe {
   color: var(--gold-light);
 }
 
-/* 3 columns desktop */
-.insta-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-}
-
 .insta-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -140,9 +153,15 @@ iframe {
   align-items: start;
 }
 
+.insta-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;   /* Perfect square */
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.4s ease, opacity 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
 
-
-/* Hover Luxury Effect */
 .insta-grid img:hover {
   transform: scale(1.04);
   opacity: 0.9;
@@ -166,22 +185,26 @@ iframe {
     padding: 60px 6%;
   }
 }
+
+/* =========================
+   CAROUSEL GALLERY
+========================= */
 .carousel-section {
   padding: 80px 10%;
-  background: #000;
+  background: var(--dark);
   text-align: center;
 }
 
 .carousel-title {
-  color: #d4af37;
   font-size: 36px;
   margin-bottom: 40px;
   letter-spacing: 2px;
+  color: var(--gold-light);
 }
 
 .carousel-container {
   position: relative;
-  max-width: 900px;
+  max-width: 950px;
   margin: auto;
   overflow: hidden;
 }
@@ -196,19 +219,20 @@ iframe {
 
 .carousel-slide img {
   width: 100%;
-  height: auto;       /* FULL IMAGE, no crop */
+  height: auto;            /* FULL IMAGE — NO CROP */
   object-fit: contain;
   border-radius: 12px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
 }
 
-/* Arrows */
-.prev, .next {
+/* Navigation Arrows */
+.prev,
+.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.6);
-  color: #d4af37;
+  background: rgba(0, 0, 0, 0.6);
+  color: var(--gold-light);
   border: none;
   padding: 12px 18px;
   cursor: pointer;
@@ -217,8 +241,9 @@ iframe {
   transition: 0.3s ease;
 }
 
-.prev:hover, .next:hover {
-  background: #d4af37;
+.prev:hover,
+.next:hover {
+  background: var(--gold-light);
   color: #000;
 }
 
