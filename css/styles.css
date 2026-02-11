@@ -81,3 +81,61 @@ iframe {
 @media(max-width:768px){
   .nav{display:none;}
 }
+.masonry-section {
+  padding: 70px 8%;
+  background: #000;
+}
+
+.masonry-title {
+  text-align: center;
+  color: #d4af37;
+  font-size: 34px;
+  margin-bottom: 50px;
+  letter-spacing: 2px;
+}
+
+/* Masonry Layout */
+.masonry-grid {
+  column-count: 4;
+  column-gap: 20px;
+}
+
+.masonry-grid img {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  break-inside: avoid;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+/* Small size effect */
+.masonry-grid img {
+  max-height: 350px;
+  object-fit: cover;
+}
+
+/* Hover luxury effect */
+.masonry-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .masonry-grid {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .masonry-grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .masonry-grid {
+    column-count: 1;
+  }
+}
