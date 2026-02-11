@@ -1,171 +1,169 @@
 :root {
   --gold: #c9a24d;
+  --gold-light: #d4af37;
   --black: #0b0b0b;
+  --dark: #000000;
+  --text: #eeeeee;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: Poppins, sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: var(--black);
-  color: #eee;
+  color: var(--text);
+  line-height: 1.6;
 }
 
-h1,h2 {
+h1, h2 {
   font-family: "Playfair Display", serif;
   letter-spacing: 1px;
-}
-
-.btn {
-  background: linear-gradient(135deg,#d4af37,#b8962e);
-  color:#000;
-  padding:14px 28px;
-  text-decoration:none;
-  border:none;
-  cursor:pointer;
+  color: var(--gold-light);
 }
 
 .section {
-  padding:90px 10%;
+  padding: 90px 10%;
 }
 
 .dark {
-  background:#000;
+  background: var(--dark);
 }
 
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #d4af37, #b8962e);
+  color: #000;
+  padding: 14px 28px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+/* Editorial Text */
 .editorial {
-  max-width:800px;
-  line-height:1.8;
+  max-width: 800px;
+  line-height: 1.8;
+  margin: auto;
+  text-align: center;
 }
 
+/* Basic Grid (if used elsewhere) */
 .grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
 
 .grid-item {
-  border:1px solid var(--gold);
-  padding:60px 20px;
-  text-align:center;
-  cursor:pointer;
+  border: 1px solid var(--gold);
+  padding: 60px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
+.grid-item:hover {
+  background: rgba(201, 162, 77, 0.08);
+}
+
+/* Lightbox */
 .lightbox {
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.9);
-  align-items:center;
-  justify-content:center;
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
 }
 
 .lightbox-content {
-  color:var(--gold);
-  font-size:26px;
+  color: var(--gold);
+  font-size: 26px;
 }
 
+/* Slider */
 .slider .slide {
-  display:none;
+  display: none;
 }
 
 .slider .active {
-  display:block;
+  display: block;
 }
 
+/* Map iframe */
 iframe {
-  width:100%;
-  height:300px;
-  border:0;
-}
-
-@media(max-width:768px){
-  .nav{display:none;}
-}
-.masonry-section {
-  padding: 70px 8%;
-  background: #000;
-}
-
-.masonry-title {
-  text-align: center;
-  color: #d4af37;
-  font-size: 34px;
-  margin-bottom: 50px;
-  letter-spacing: 2px;
-}
-
-/* Masonry Layout */
-.masonry-grid {
-  column-count: 4;
-  column-gap: 20px;
-}
-
-.masonry-grid img {
   width: 100%;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  break-inside: avoid;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  cursor: pointer;
+  height: 300px;
+  border: 0;
 }
 
-/* Small size effect */
-.masonry-grid img {
-  max-height: 350px;
-  object-fit: cover;
-}
-
-/* Hover luxury effect */
-.masonry-grid img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
-}
+/* ============================= */
+/* INSTAGRAM 3 × 5 GALLERY STYLE */
+/* ============================= */
 
 .insta-section {
-  padding: 70px 8%;
-  background: #000;
+  padding: 80px 8%;
+  background: var(--dark);
 }
 
 .insta-title {
   text-align: center;
-  color: #d4af37;
-  font-size: 34px;
-  margin-bottom: 40px;
+  font-size: 36px;
+  margin-bottom: 50px;
   letter-spacing: 2px;
+  color: var(--gold-light);
 }
 
-/* 3 × 5 Grid */
+/* 3 columns desktop */
 .insta-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 12px;
 }
 
-/* Square Images */
+/* Perfect square images */
 .insta-grid img {
   width: 100%;
-  aspect-ratio: 1 / 1;   /* Makes perfect square */
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.4s ease, opacity 0.4s ease;
+  border-radius: 10px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease;
   cursor: pointer;
 }
 
-/* Hover Effect */
+/* Hover Luxury Effect */
 .insta-grid img:hover {
-  transform: scale(1.05);
-  opacity: 0.85;
+  transform: scale(1.04);
+  opacity: 0.9;
+  box-shadow: 0 10px 30px rgba(201, 162, 77, 0.35);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* Tablet */
+@media (max-width: 992px) {
   .insta-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 480px) {
+/* Mobile */
+@media (max-width: 576px) {
   .insta-grid {
     grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 60px 6%;
   }
 }
